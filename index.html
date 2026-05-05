@@ -701,6 +701,10 @@
     color: var(--text);
     text-decoration: none;
     display: inline-block;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    line-height: 1.15;
     margin: 32px 0 48px;
     letter-spacing: -1px;
     transition: color 0.2s;
@@ -802,7 +806,14 @@
     .nav-links { display: none; }
     #hero, #about, #skills, #projects, #experience, #contact { padding: 80px 24px; }
     .about-grid { grid-template-columns: 1fr; }
-    .hero-stats { position: static; margin-top: 48px; }
+    .hero-stats {
+      position: static;
+      margin-top: 48px;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+    .stat-num { font-size: 34px; }
     .project-card { grid-template-columns: 1fr; }
     footer { flex-direction: column; gap: 12px; text-align: center; }
     .about-card-grid { grid-template-columns: 1fr; }
